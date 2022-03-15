@@ -55,10 +55,7 @@ flutter:
   uses-material-design: true
 
   assets:
-    - assets/images/monkasel_1.jpeg
-    - assets/images/monkasel_2.jpg
-    - assets/images/monkasel_3.jpg
-    - assets/images/monkasel_4.jpeg
+    - assets/images/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.

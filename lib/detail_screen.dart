@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:praktikum3/model/tourism_place.dart';
 
 class DetailScreen extends StatelessWidget {
-  const DetailScreen({Key? key}) : super(key: key);
+  const DetailScreen({Key? key, required this.place}) : super(key: key);
+
+  final TourismPlace place;
 
   @override
   Widget build(BuildContext context) {
@@ -11,13 +14,13 @@ class DetailScreen extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: <Widget>[
-              Image.asset('assets/images/monkasel_1.jpeg'),
+              Image.asset(place.imageAsset),
               Container(
                 margin: const EdgeInsets.only(top: 16.0),
-                child: const Text(
-                  "Surabaya Submarine Monument",
+                child: Text(
+                  place.title,
                   textAlign: TextAlign.center,
-                  style: TextStyle(
+                  style: const TextStyle(
                     fontSize: 30.0,
                     fontFamily: 'Lobster',
                   ),
@@ -29,21 +32,21 @@ class DetailScreen extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: <Widget>[
                     Column(
-                      children: const <Widget>[
+                      children: <Widget>[
                         Icon(Icons.calendar_today),
-                        Text('Open Everyday'),
+                        Text(place.day),
                       ],
                     ),
                     Column(
-                      children: const <Widget>[
+                      children: <Widget>[
                         Icon(Icons.schedule),
-                        Text('08.00 - 16.00'),
+                        Text(place.time),
                       ],
                     ),
                     Column(
-                      children: const <Widget>[
+                      children: <Widget>[
                         Icon(Icons.attach_money),
-                        Text('IDR 15.000,-'),
+                        Text(place.price),
                       ],
                     ),
                   ],
@@ -51,22 +54,10 @@ class DetailScreen extends StatelessWidget {
               ), // New Container
               Container(
                 padding: const EdgeInsets.all(16.0),
-                child: const Text(
-                  'Monumen Kapal Selam atau disingkat Monkasel merupakan sebuah '
-                  'monumen yang dibangun menggunakan kapal selam asli. '
-                  'Monumen ini terletak di Jalan Pemuda No. 39, Kota Surabaya, '
-                  'Jawa Timur. Data Dinas Pariwisata Jawa Timur mencatat '
-                  'Monumen Kapal Selam dibuat dari kapal selam KRI Pasopati '
-                  '410. Salah satu kapal selam milik armada Angkatan Laut '
-                  'Republik Indonesia buatan Uni Soviet tahun 1952. Saat ini, '
-                  'Monumen Kapal Selam merupakan salah satu tempat wisata '
-                  'di Surabaya yang ramai dikunjungi karena unik, edukatif, '
-                  'dan menarik. Menikmati keindahan dari kapal selam Indonesia '
-                  'di Surabaya ini tidak perlu mengeluarkan banyak biaya, '
-                  'karena HTM murah siap memanjakan aktivitas liburan '
-                  'bersama keluarga di Surabaya.',
+                child: Text(
+                  place.description,
                   textAlign: TextAlign.center,
-                  style: TextStyle(
+                  style: const TextStyle(
                     fontSize: 16.0,
                     fontFamily: 'Oxygen',
                   ),
@@ -77,33 +68,40 @@ class DetailScreen extends StatelessWidget {
                 child: ListView(
                   scrollDirection: Axis.horizontal,
                   children: <Widget>[
+                    //  Padding(
+                    //    padding: const EdgeInsets.all(4.0),
+                    //    child: ClipRRect(
+                    //      borderRadius: BorderRadius.circular(15.0),
+                    //      child: Image.network(
+                    //          'https://media-cdn.tripadvisor.com/media/photo-m/1280/16/a9/33/43/liburan-di-farmhouse.jpg'),
+                    //    ),
+                    //  ),
                     Padding(
                       padding: const EdgeInsets.all(4.0),
                       child: ClipRRect(
-                        borderRadius: BorderRadius.circular(15),
-                        child: Image.network(
-                            'https://media-cdn.tripadvisor.com/media/photo-m/1280/16/a9/33/43/liburan-di-farmhouse.jpg'),
+                        borderRadius: BorderRadius.circular(15.0),
+                        child: Image.asset(place.image1),
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.all(4.0),
+                      child: ClipRRect(
+                        borderRadius: BorderRadius.circular(15.0),
+                        child: Image.asset(place.image2),
                       ),
                     ),
                     Padding(
                       padding: const EdgeInsets.all(4.0),
                       child: ClipRRect(
                         borderRadius: BorderRadius.circular(15),
-                        child: Image.asset('assets/images/monkasel_2.jpg'),
+                        child: Image.asset(place.image3),
                       ),
                     ),
                     Padding(
                       padding: const EdgeInsets.all(4.0),
                       child: ClipRRect(
-                        borderRadius: BorderRadius.circular(15),
-                        child: Image.asset('assets/images/monkasel_3.jpg'),
-                      ),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.all(4.0),
-                      child: ClipRRect(
-                        borderRadius: BorderRadius.circular(15),
-                        child: Image.asset('assets/images/monkasel_4.jpeg'),
+                        borderRadius: BorderRadius.circular(15.0),
+                        child: Image.asset(place.image4),
                       ),
                     ),
                   ],
