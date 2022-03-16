@@ -18,7 +18,7 @@ class DetailScreen extends StatelessWidget {
               Container(
                 margin: const EdgeInsets.only(top: 16.0),
                 child: Text(
-                  place.title,
+                  place.name,
                   textAlign: TextAlign.center,
                   style: const TextStyle(
                     fontSize: 30.0,
@@ -79,28 +79,28 @@ class DetailScreen extends StatelessWidget {
                     Padding(
                       padding: const EdgeInsets.all(4.0),
                       child: ClipRRect(
-                        borderRadius: BorderRadius.circular(15.0),
+                        borderRadius: BorderRadius.circular(20.0),
                         child: Image.asset(place.image1),
                       ),
                     ),
                     Padding(
                       padding: const EdgeInsets.all(4.0),
                       child: ClipRRect(
-                        borderRadius: BorderRadius.circular(15.0),
+                        borderRadius: BorderRadius.circular(20.0),
                         child: Image.asset(place.image2),
                       ),
                     ),
                     Padding(
                       padding: const EdgeInsets.all(4.0),
                       child: ClipRRect(
-                        borderRadius: BorderRadius.circular(15),
+                        borderRadius: BorderRadius.circular(20.0),
                         child: Image.asset(place.image3),
                       ),
                     ),
                     Padding(
                       padding: const EdgeInsets.all(4.0),
                       child: ClipRRect(
-                        borderRadius: BorderRadius.circular(15.0),
+                        borderRadius: BorderRadius.circular(20.0),
                         child: Image.asset(place.image4),
                       ),
                     ),

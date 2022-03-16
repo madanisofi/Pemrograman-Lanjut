@@ -1,6 +1,5 @@
 class TourismPlace {
   String name;
-  String title;
   String location;
   String imageAsset;
   String image1;
@@ -14,7 +13,6 @@ class TourismPlace {
 
   TourismPlace({
     required this.name,
-    required this.title,
     required this.location,
     required this.imageAsset,
     required this.image1,
@@ -33,14 +31,13 @@ class TourismPlace {
 var tourismPlaceList = [
   TourismPlace(
     name: 'Heha Sky View',
-    title: 'Heha Sky View',
     location: 'Jl. Dlingo - Patuk No.2, Yogyakarta',
     imageAsset: 'assets/images/hsv_1.jpg',
     image1: 'assets/images/hsv_2.jpg',
     image2: 'assets/images/hsv_3.jpg',
     image3: 'assets/images/hsv_4.jpg',
     image4: 'assets/images/hsv_5.jpg',
-    day: 'Senin - Jumat',
+    day: 'Setiap Hari',
     time: '10.00 - 21.00',
     price: 'IDR 20.000',
     description: 'Heha Sky View atau disingkat HSV merupakan sebuah '
@@ -57,7 +54,6 @@ var tourismPlaceList = [
   ),
   TourismPlace(
     name: 'Kawah Putih Ciwidey',
-    title: 'Kawah Putih Ciwidey',
     location: 'Jl. Raya Soreang Ciwidey, Bandung',
     imageAsset: 'assets/images/kp_1.jpg',
     image1: 'assets/images/kp_2.jpg',
@@ -80,7 +76,6 @@ var tourismPlaceList = [
   ),
   TourismPlace(
     name: 'Bukit Nirwana Pujon',
-    title: 'Bukit Nirwana Pujon',
     location: 'Tulungrejo, Pujon Kidul, Malang',
     imageAsset: 'assets/images/nirwana_1.jpeg',
     image1: 'assets/images/nirwana_2.jpg',
@@ -103,16 +98,15 @@ var tourismPlaceList = [
   ),
   TourismPlace(
     name: 'Monumen Kapal Selam',
-    title: 'Monumen Kapal Selam',
     location: 'Jl. Pemuda No.39, Surabaya',
     imageAsset: 'assets/images/monkasel_1.jpeg',
     image1: 'assets/images/monkasel_2.jpg',
     image2: 'assets/images/monkasel_3.jpg',
     image3: 'assets/images/monkasel_4.jpeg',
     image4: 'assets/images/monkasel_5.jpg',
-    day: 'Setiap Hari',
+    day: 'Selasa - Minggu',
     time: '08.00 - 16.00',
-    price: 'IDR 10.000',
+    price: 'IDR 15.000',
     description: 'Monumen Kapal Selam atau disingkat Monkasel merupakan sebuah '
         'monumen yang dibangun menggunakan kapal selam asli. '
         'Monumen ini terletak di Jalan Pemuda No. 39, Kota Surabaya, '
@@ -128,7 +122,6 @@ var tourismPlaceList = [
   ),
   TourismPlace(
     name: 'Taman Nasional Baluran',
-    title: 'Taman Nasional Baluran',
     location: 'Sumberwaru, Banyuputih, Situbondo',
     imageAsset: 'assets/images/baluran_1.jpg',
     image1: 'assets/images/baluran_2.jpeg',
@@ -136,8 +129,8 @@ var tourismPlaceList = [
     image3: 'assets/images/baluran_4.jpg',
     image4: 'assets/images/baluran_5.jpeg',
     day: 'Setiap Hari',
-    time: '08.00 - 16.00',
-    price: 'IDR 18.500',
+    time: '08.00 - 22.00',
+    price: 'IDR 10.000',
     description: 'Taman Nasional Baluran yang  sering dijuluki sebagai '
         '"Africa Van Java" atau Little Africa In Java merupakan salah '
         'satu Taman Nasional di Indonesia yang terletak di wilayah '
