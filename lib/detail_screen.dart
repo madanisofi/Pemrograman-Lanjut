@@ -33,19 +33,19 @@ class DetailScreen extends StatelessWidget {
                   children: <Widget>[
                     Column(
                       children: <Widget>[
-                        Icon(Icons.calendar_today),
+                        const Icon(Icons.calendar_today),
                         Text(place.day),
                       ],
                     ),
                     Column(
                       children: <Widget>[
-                        Icon(Icons.schedule),
+                        const Icon(Icons.schedule),
                         Text(place.time),
                       ],
                     ),
                     Column(
                       children: <Widget>[
-                        Icon(Icons.attach_money),
+                        const Icon(Icons.attach_money),
                         Text(place.price),
                       ],
                     ),

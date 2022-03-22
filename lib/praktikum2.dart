@@ -61,29 +61,28 @@ class _MyHomePageState extends State<MyHomePage> {
       // called again, and so nothing would appear to happen.
       _counter++;
 
-      if(_counter>30){
-        _counter=1;
+      if (_counter > 30) {
+        _counter = 1;
         text = 'Genap Kel. 3: ';
         text2 = 'Bilangan Prima: ';
       }
 
-
       // Latihan
 
-      if(_counter%2==0 && _counter%3==0){
-        text+='${_counter}, ';
+      if (_counter % 2 == 0 && _counter % 3 == 0) {
+        text += '$_counter, ';
       }
 
       //  Tugas
       int pembagi = 0;
-      for(int i = 1; i <= _counter; i++){
-        if(_counter%i == 0){
+      for (int i = 1; i <= _counter; i++) {
+        if (_counter % i == 0) {
           pembagi++;
         }
       }
 
-      if(pembagi==2){
-        text2+='${_counter}, ';
+      if (pembagi == 2) {
+        text2 += '$_counter, ';
       }
     });
   }
