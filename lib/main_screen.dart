@@ -31,7 +31,7 @@ class _MainScreenState extends State<MainScreen> {
           )
         ],
       ),
-      body: const TourismList(),
+      body: TourismList(doneTourismPlaceList: doneTourismPlaceList),
     );
   }
 }

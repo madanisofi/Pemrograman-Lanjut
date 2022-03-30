@@ -1,3 +1,30 @@
+class TourismResult {
+  TourismResult({
+    required this.status,
+    required this.totalResults,
+    required this.tourismPlaces,
+  });
+
+  String status;
+  int totalResults;
+  List<TourismPlace> tourismPlaces;
+
+  factory TourismResult.fromJson(Map<String, dynamic> json) => TourismResult(
+        status: json["status"],
+        totalResults: json["totalResults"],
+        tourismPlaces: List<TourismPlace>.from((json["tourismPlaces"] as List)
+            .map((x) => TourismPlace.fromJson(x))
+            .where((article) =>
+                article.name != null &&
+                article.description != null &&
+                article.day != null &&
+                article.time != null &&
+                article.price != null &&
+                article.imageAsset != null &&
+                article.location != null)),
+      );
+}
+
 class TourismPlace {
   String name;
   String location;
@@ -25,5 +52,16 @@ class TourismPlace {
     required this.description,
   });
 
-  get place => null;
+  factory TourismPlace.fromJson(Map<String, dynamic> json) => TourismPlace(
+      location: json['location'],
+      name: json['name'],
+      description: json['description'],
+      day: json['day'],
+      time: json['time'],
+      price: json['price'],
+      imageAsset: json['imageAsset'],
+      image1: json['image1'],
+      image2: json['image2'],
+      image3: json['image3'],
+      image4: json['image4']);
 }
