@@ -31,7 +31,7 @@ class _TourismListState extends State<TourismList> {
       builder: (context, AsyncSnapshot<TourismResult> snapshot) {
         var state = snapshot.connectionState;
         if (state != ConnectionState.done) {
-          return Center(child: CircularProgressIndicator());
+          return const Center(child: CircularProgressIndicator());
         } else {
           if (snapshot.hasData) {
             return ListView.builder(
@@ -65,7 +65,7 @@ class _TourismListState extends State<TourismList> {
           } else if (snapshot.hasError) {
             return Center(child: Text(snapshot.error.toString()));
           } else {
-            return Text('');
+            return const Text('');
           }
         }
       },
