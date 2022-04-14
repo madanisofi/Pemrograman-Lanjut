@@ -9,8 +9,8 @@ class ApiService {
   // static final String _country = 'id';
 
   Future<TourismResult> topHeadlines() async {
-    final response = await http.get(
-        Uri.parse('http://10.0.0.41:8080/praktikum3/keperluan_api/index.php'));
+    final response = await http
+        .get(Uri.parse('http://192.168.100.110:8080/data-api/index.php'));
     if (response.statusCode == 200) {
       return TourismResult.fromJson(json.decode(response.body));
     } else {
